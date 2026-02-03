@@ -9,11 +9,10 @@ export const Result = ({ input }: ResultProps) => {
 
   return (
     <>
-      {console.log(input)}
       <table id="result">
         <thead>
           <tr>
-            <th>Year</th>
+            <th>Month</th>
             <th>Investment Value</th>
             <th>Interest (Year)</th>
             <th>Total Interest</th>

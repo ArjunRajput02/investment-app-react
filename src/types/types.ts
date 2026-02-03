@@ -1,9 +1,9 @@
 export type UserInputType = {
-  initialInvestment: number | string;
-  annualInvestment: number | string;
-  durationType: string;
-  expectedReturn: number | string;
-  duration: number | string;
+  initialInvestment: number;
+  annualInvestment: number;
+  expectedReturn: number;
+  duration: number;
+  durationType: "Month" | "Year";
 };
 
 export type UserInputProps = {
@@ -17,7 +17,7 @@ export type ResultProps = {
     annualContribution: number;
     interestRate: number;
     years: number;
-    durationtype: string;
+    durationType: "Month" | "Year";
   };
 };
 
@@ -25,5 +25,20 @@ export type YearData = {
   year: number;
   valueEndOfYear: number;
   interest: number;
+  annualInvestment: number;
+};
+
+export type InvestmentParams = {
+  principal: number;
+  annualContribution: number;
+  interestRate: number;
+  years: number;
+  durationType: string;
+};
+
+export type AnnualInvestmentData = {
+  year: number;
+  interest: number;
+  valueEndOfYear: number;
   annualInvestment: number;
 };

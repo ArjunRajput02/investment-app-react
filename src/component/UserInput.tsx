@@ -1,4 +1,5 @@
-import type { UserInputProps, UserInputType } from "../types/types";
+import type { UserInputProps } from "../types/types";
+
 export const UserInput = ({ onChange, userInput }: UserInputProps) => {
   return (
     <section id="user-input">
@@ -15,6 +16,7 @@ export const UserInput = ({ onChange, userInput }: UserInputProps) => {
             }
           />
         </p>
+
         <p>
           <label htmlFor="annualInvestment">Annual Investment</label>
           <input
@@ -35,12 +37,10 @@ export const UserInput = ({ onChange, userInput }: UserInputProps) => {
           <select
             id="durationType"
             value={userInput.durationType}
-            onChange={(event) => {
-              onChange("durationType", event.target.value);
-            }}
+            onChange={(event) => onChange("durationType", event.target.value)}
           >
-            <option>Month</option>
-            <option>Year</option>
+            <option value="Month">Month</option>
+            <option value="Year">Year</option>
           </select>
         </p>
       </div>
@@ -56,6 +56,7 @@ export const UserInput = ({ onChange, userInput }: UserInputProps) => {
             onChange={(event) => onChange("expectedReturn", event.target.value)}
           />
         </p>
+
         <p>
           <label htmlFor="duration">Duration</label>
           <input

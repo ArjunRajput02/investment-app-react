@@ -1,28 +1,15 @@
-export interface InvestmentParams {
-  principal: number;
-  annualContribution: number;
-  interestRate: number; // percentage
-  years: number;
-  durationtype: string;
-}
-
-export interface AnnualInvestmentData {
-  year: number;
-  interest: number;
-  valueEndOfYear: number;
-  annualInvestment: number;
-}
+import type { InvestmentParams, AnnualInvestmentData } from "../types/types";
 
 export function calculateInvestmentResults({
   principal,
   annualContribution,
   interestRate,
   years,
-  durationtype,
+  durationType,
 }: InvestmentParams): AnnualInvestmentData[] {
   const annualData: AnnualInvestmentData[] = [];
   let investmentValue = principal;
-  years = years * (durationtype === "Month" ? 1 : 12);
+  years = years * (durationType === "Month" ? 1 : 12);
 
   for (let i = 0; i < years; i++) {
     const interestEarnedInYear = investmentValue * (interestRate / 100);
@@ -35,7 +22,6 @@ export function calculateInvestmentResults({
       annualInvestment: annualContribution,
     });
   }
-
   return annualData;
 }
 
