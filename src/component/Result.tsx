@@ -1,5 +1,5 @@
 import { calculateInvestmentResults, formatter } from "../utils/investment";
-import type { ResultProps, YearData } from "../types/types";
+import type { ResultProps, YearData } from "../utils/types";
 
 export const Result = ({ input }: ResultProps) => {
   const data: YearData[] = calculateInvestmentResults(input);

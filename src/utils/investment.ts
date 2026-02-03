@@ -1,4 +1,4 @@
-import type { InvestmentParams, AnnualInvestmentData } from "../types/types";
+import type { InvestmentParams, YearData } from "./types";
 
 export function calculateInvestmentResults({
   principal,
@@ -6,8 +6,8 @@ export function calculateInvestmentResults({
   interestRate,
   years,
   durationType,
-}: InvestmentParams): AnnualInvestmentData[] {
-  const annualData: AnnualInvestmentData[] = [];
+}: InvestmentParams): YearData[] {
+  const annualData: YearData[] = [];
   let investmentValue = principal;
   years = years * (durationType === "Month" ? 1 : 12);
 

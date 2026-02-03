@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Header } from "./component/Header";
 import { Result } from "./component/Result";
 import { UserInput } from "./component/UserInput";
-import type { UserInputType } from "./types/types";
+import type { UserInputType } from "./utils/types";
 
 function App() {
   const [userInput, setUserInput] = useState<UserInputType>({

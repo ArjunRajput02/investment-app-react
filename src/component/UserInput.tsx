@@ -1,4 +1,4 @@
-import type { UserInputProps } from "../types/types";
+import type { UserInputProps } from "../utils/types";
 
 export const UserInput = ({ onChange, userInput }: UserInputProps) => {
   return (

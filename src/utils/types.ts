@@ -36,9 +36,4 @@ export type InvestmentParams = {
   durationType: string;
 };
 
-export type AnnualInvestmentData = {
-  year: number;
-  interest: number;
-  valueEndOfYear: number;
-  annualInvestment: number;
-};
+
